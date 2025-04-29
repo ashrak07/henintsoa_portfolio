@@ -5,10 +5,10 @@
         <!-- Photo -->
         <FadeInOnScroll animationClass="rotate-6">
           <div
-            class="b2 flex-shrink-0 w-64 h-64 rounded-full overflow-hidden shadow-lg border-4 border-white"
+            class="b2 flex-shrink-0 w-65 h-90 overflow-hidden shadow-lg border-4 border-white"
           >
             <img
-              src="../assets/Developer.webp"
+              src="../assets/henintsoa.jpeg"
               alt="Votre nom"
               class="w-full h-full object-cover clip-diamond"
             />
@@ -17,9 +17,7 @@
         <!-- Description -->
         <div class="animate-fadeIn text-center px-16 lg:text-left">
           <FadeInOnScroll>
-            <h2 class="text-3xl font-semibold mb-4">
-              Bonjour, je suis un Développeur Web
-            </h2>
+            <h2 class="text-3xl font-semibold mb-4">Henintsoa RAKOTONDRAIBE</h2>
             <p class="text-lg">
               Passionné par la création de sites web modernes et performants, je
               mets mes compétences en HTML, CSS, JavaScript et Vue.js au service

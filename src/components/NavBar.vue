@@ -4,7 +4,7 @@
       <div class="flex justify-between h-16">
         <!-- Logo -->
         <div class="flex items-center">
-          <a href="#" class="text-2xl font-bold text-white">Portfolio</a>
+          <a href="#" class="text-2xl font-bold text-white">Henintsoa</a>
         </div>
         <!-- Menu pour les écrans moyens et plus -->
         <div class="hidden md:flex space-x-8 items-center">
