@@ -2,11 +2,11 @@
   <div
     ref="fadeElement"
     :class="[
-      'transition-all duration-1000 ease-out',
-      isVisible ? animationClass : 'opacity-0 translate-y-5',
+      'transition-all duration-500 ease-out',
+      isVisible ? animationClass : 'opacity-0 translate-y-20',
     ]"
   >
-    <slot />
+    <slot></slot>
   </div>
 </template>
 

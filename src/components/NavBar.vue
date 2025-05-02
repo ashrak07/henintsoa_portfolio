@@ -43,9 +43,9 @@
       :class="['md:hidden', isMenuOpen ? 'block' : 'hidden']"
       class="bg-gray-900 space-x-8 px-8 pt-4 pb-6"
     >
-      <NavLink href="#about" @navigate="closeMenu">About Me</NavLink>
-      <NavLink href="#skill" @navigate="closeMenu">Skills</NavLink>
-      <NavLink href="#project" @navigate="closeMenu">Projects</NavLink>
+      <NavLink href="#about" @navigate="closeMenu">A propos</NavLink>
+      <NavLink href="#skill" @navigate="closeMenu">Compétences</NavLink>
+      <NavLink href="#project" @navigate="closeMenu">Projets</NavLink>
       <NavLink href="#contact" @navigate="closeMenu">Contact</NavLink>
     </div>
   </nav>
