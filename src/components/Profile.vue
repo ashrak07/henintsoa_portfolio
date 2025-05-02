@@ -10,7 +10,7 @@
             <img
               src="../assets/henintsoa.jpeg"
               alt="Votre nom"
-              class="w-full h-full rounded-full object-cover relative"
+              class="w-full h-full rounded-full object-cover border-4 border-green-500 relative"
               style="object-position: center top"
             />
           </div>
