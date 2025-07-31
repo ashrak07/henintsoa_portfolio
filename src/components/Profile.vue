@@ -1,6 +1,6 @@
 <template>
   <section id="about" class="bg-gray-900 text-white">
-    <div class="pt-35 min-h-screen max-w-4xl mx-auto">
+    <div class="pt-35 min-h-screen max-w-6xl mx-auto">
       <div class="flex flex-col lg:flex-row items-center gap-6">
         <!-- Photo -->
         <FadeInOnScroll animationClass="">
@@ -10,7 +10,7 @@
             <img
               src="../assets/henintsoa.jpeg"
               alt="Votre nom"
-              class="w-full h-full rounded-full object-cover border-4 border-green-500 relative"
+              class="w-full h-full rounded-full object-cover border-4 border-white relative"
               style="object-position: center top"
             />
           </div>
@@ -19,20 +19,28 @@
         <!-- Description -->
         <div class="animate-fadeIn text-center px-6 sm:px-16 lg:text-left">
           <FadeInOnScroll animationClass="duration-1000 translate-y">
-            <div class="text-3xl sm:text-5xl font-semibold mb-5">
-              Henintsoa RAKOTONDRAIBE
+            <div class="font-1 text-5xl font-semibold mb-5">
+              Henintsoa <br />
+              RAKOTONDRAIBE
             </div>
             <div class="text-xl sm:text-3xl font-semibold mb-5">
-              Je suis <span ref="typedElement" class="text-green-400"></span>
+              Je suis <span ref="typedElement" class="text-blue-400"></span>
             </div>
           </FadeInOnScroll>
           <FadeInOnScroll animationClass="duration-1000 translate-y">
-            <div class="text-base sm:text-lg">
+            <div class="font-1 sm:text-sm">
               Passionnée par la création de sites web modernes et performants,
               je mets mes compétences JavaScript, Vue.js et React.js au service
               de projets innovants.
             </div>
           </FadeInOnScroll>
+          <div
+            class="pt-5"
+            style="display: flex; gap: 10px; justify-content: end"
+          >
+            <img src="/src/assets/github.svg" alt="" style="height: 20px" />
+            <img src="/src/assets/linkedin .svg" alt="" style="height: 20px" />
+          </div>
         </div>
       </div>
     </div>

@@ -3,6 +3,50 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Poppins";
+  src: url("../src/assets/fonts/Poppins-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Allura";
+  src: url("../src/assets/fonts/Allura-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "BebasNeue";
+  src: url("../src/assets/fonts/BebasNeue-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("../src/assets/fonts/Quicksand-VariableFont_wght.ttf")
+    format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nunito";
+  src: url("../src/assets/fonts/Nunito-VariableFont_wght.ttf")
+    format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../src/assets/fonts/Montserrat-VariableFont_wght.ttf")
+    format("truetype");
+  font-display: swap;
+}
+
+.font-1 {
+  font-family: "Montserrat";
+}
+.font-2 {
+  font-family: "Quicksand";
+}
+.font-3 {
+  font-family: "Allura";
+}
+
 .b2 {
   background-color: #eeaeae;
 }
@@ -14,6 +58,18 @@
 }
 .b1 {
   background-color: #eeaee3;
+}
+.b10 {
+  background-color: #0f2027;
+}
+.b11 {
+  background-color: #ff5e62;
+}
+.b12 {
+  background-color: #00c9a7;
+}
+.b12 {
+  background-color: #cccccc;
 }
 
 /* style.css */

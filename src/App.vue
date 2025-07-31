@@ -7,7 +7,8 @@ import Contact from "../src/components/Contact.vue";
 </script>
 
 <template>
-  <div class="bg-[#11827] min-h-screen">
+  <!-- <div class="bg-[#11827] min-h-screen"> -->
+  <div class="min-h-screen">
     <Navbar />
     <Profile />
     <Skill />

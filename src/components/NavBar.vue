@@ -4,10 +4,14 @@
       <div class="flex justify-between h-16">
         <!-- Logo -->
         <div class="flex items-center">
-          <a href="#" class="text-2xl font-bold text-white">Henintsoa</a>
+          <a
+            href="#"
+            class="font-1 font-semibold text-3xl bg-gradient-to-r from-blue-400 to-white text-transparent bg-clip-text"
+            >Henintsoa R.</a
+          >
         </div>
         <!-- Menu pour les écrans moyens et plus -->
-        <div class="hidden md:flex space-x-8 items-center">
+        <div class="font-1 hidden md:flex space-x-8 items-center">
           <NavLink href="#about">A propos</NavLink>
           <NavLink href="#skill">Compétences</NavLink>
           <NavLink href="#project">Projets</NavLink>

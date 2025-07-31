@@ -4,7 +4,9 @@
       <FadeInOnScroll
         animationClass="transition-y-10 sm:pb-5 duration-800 ease-in-out"
       >
-        <h2 class="text-3xl font-semibold text-center pb-5">Mes Compétences</h2>
+        <h2 class="font-1 text-3xl font-semibold text-center pb-5">
+          Mes Compétences
+        </h2>
       </FadeInOnScroll>
       <div class="grid grid-cols-1 md:grid-cols-2 sm:gap-8">
         <SkillBar class="" label="HTML" percentage="90" />
