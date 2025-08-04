@@ -1,5 +1,9 @@
 <template>
-  <section id="project" class="pt-15 min-h-screen bg-gray-900 text-white">
+  <!-- <section id="project" class="pt-15 min-h-screen bg-gray-900 text-white"> -->
+  <section
+    id="project"
+    class="pt-15 min-h-screen bg-gradient-to-t from-gray-900 to-black text-white"
+  >
     <div class="max-w-7xl mx-auto p-6 lg:px-8">
       <FadeInOnScroll
         animationClass="transition-y-10 sm:pb-5 duration-800 ease-in-out"
