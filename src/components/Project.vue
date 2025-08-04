@@ -31,69 +31,64 @@
       >
         <!-- Overlay -->
         <div
-          class="relative bg-black bg-opacity-80 text-white p-3 rounded-lg w-[80vw] h-[80vh] flex flex-col"
+          class="relative bg-black bg-opacity-80 text-white p-3 rounded-lg w-[90vw] max-w-5xl h-[90vh] overflow-hidden flex flex-col"
         >
           <button
             @click="closeModal"
             class="absolute z-50 top-0 right-0 text-white text-5xl"
           >
-            &times;
+            <font-awesome-icon :icon="['fas', 'times']" class="text-3xl" />
           </button>
 
           <!-- <div class="flex gap-8 h-full"> -->
           <!-- Colonne gauche -->
           <!-- <div class="w-1/2 relative flex flex-col justify-between"> -->
 
-          <div class="relative flex flex-col justify-between">
-            <!-- Carrousel image -->
-            <!-- <div class="relative h-[100%]"> -->
-            <div class="relative w-full aspect-video">
+          <!-- Contenu image + texte -->
+          <div class="flex flex-col md:flex-row gap-4 h-full mt-6">
+            <div
+              class="w-full md:w-1/2 h-60 md:h-full flex justify-center items-center relative"
+            >
               <transition name="fade" mode="out-in">
                 <img
                   :key="currentImageIndex"
                   :src="selectedProject.images[currentImageIndex]"
                   alt="Image du projet"
-                  class="w-full h-full object-cover rounded transition-all duration-500"
+                  class="max-h-full max-w-full object-contain rounded"
                 />
               </transition>
               <!-- Bouton précédent -->
               <button
                 @click="prevImage"
-                class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 text-blue-400 font-bold px-2 py-1 rounded-full"
+                class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 text-blue-400 font-bold px-3 py-2 rounded-full z-10"
               >
-                ‹
+                <font-awesome-icon
+                  :icon="['fas', 'chevron-left']"
+                  class="w-5 h-5"
+                />
               </button>
               <!-- Bouton suivant -->
               <button
                 @click="nextImage"
-                class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 text-blue-400 font-bold px-2 py-1 rounded-full"
+                class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 text-blue-400 font-bold px-3 py-2 rounded-full z-10"
               >
-                ›
+                <font-awesome-icon
+                  :icon="['fas', 'chevron-right']"
+                  class="w-5 h-5"
+                />
               </button>
             </div>
-          </div>
-
-          <div class="mt-2 overflow-y-auto">
-            <div class="">
-              <h3 class="font-1 text-xl font-semibold mb-2">
+            <div class="w-full md:w-1/2 flex-1 overflow-y-auto pr-2">
+              <h3 class="font-1 text-lg md:text-xl font-semibold mb-2">
                 {{ selectedProject.title }}
               </h3>
-              <p class="font-2 text-xs mb-4">
+              <p
+                class="font-2 text-sm md:text-base leading-relaxed text-gray-200"
+              >
                 {{ selectedProject.description }}
               </p>
-              <!-- <a
-                    :href="selectedProject.link"
-                    target="_blank"
-                    class="inline-block bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-600 transition-colors"
-                  >
-                    Visiter le projet
-                  </a> -->
             </div>
           </div>
-          <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reprehenderit aperiam harum recusandae consequatur, nisi corporis
-              similique voluptates! Porro excepturi est ad et possimus eos
-              vero... -->
         </div>
       </div>
     </div>
