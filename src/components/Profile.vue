@@ -1,5 +1,9 @@
 <template>
-  <section id="about" class="md:px-30 md:py-40 pt-20 bg-gray-900 text-white">
+  <!-- <section id="about" class="md:px-30 md:py-40 pt-20 bg-gray-900 text-white"> -->
+  <section
+    id="about"
+    class="md:px-30 md:py-40 pt-20 bg-gradient-to-t from-gray-900 to-black p-6 text-white"
+  >
     <div class="">
       <div class="flex flex-col lg:flex-row items-center gap-6">
         <!-- Photo -->

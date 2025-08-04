@@ -1,5 +1,7 @@
 <template>
-  <nav class="bg-gray-900 fixed min-w-screen shadow-sm z-10">
+  <nav
+    class="bg-gray-900 fixed top-0 left-0 w-full shadow-sm z-10 transition-transform duration-300"
+  >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16">
         <!-- Logo -->

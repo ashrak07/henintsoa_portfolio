@@ -87,3 +87,10 @@
 .animate-fadeIn {
   animation: fadeIn 1s ease-out forwards;
 }
+
+body {
+  background: radial-gradient(white 1px, transparent 1px),
+    radial-gradient(white 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+}
