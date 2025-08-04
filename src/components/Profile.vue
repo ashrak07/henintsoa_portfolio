@@ -1,11 +1,11 @@
 <template>
-  <section id="about" class="bg-gray-900 text-white">
-    <div class="pt-35 min-h-screen max-w-6xl mx-auto">
+  <section id="about" class="md:px-30 md:py-40 pt-20 bg-gray-900 text-white">
+    <div class="">
       <div class="flex flex-col lg:flex-row items-center gap-6">
         <!-- Photo -->
         <FadeInOnScroll animationClass="">
           <div
-            class="flex-shrink-0 w-32 sm:w-68 h-32 sm:h-68 overflow-hidden relative group"
+            class="flex-shrink-0 w-50 h-50 sm:w-68 sm:h-68 overflow-hidden relative group"
           >
             <img
               src="../assets/henintsoa.jpeg"
@@ -19,16 +19,16 @@
         <!-- Description -->
         <div class="animate-fadeIn text-center px-6 sm:px-16 lg:text-left">
           <FadeInOnScroll animationClass="duration-1000 translate-y">
-            <div class="font-1 text-5xl font-semibold mb-5">
+            <div class="font-1 text-2xl font-semibold md:text-5xl">
               Henintsoa <br />
               RAKOTONDRAIBE
             </div>
-            <div class="text-xl sm:text-3xl font-semibold mb-5">
+            <div class="my-4 text-lg font-semibold md:my-6 md:text-3xl">
               Je suis <span ref="typedElement" class="text-blue-400"></span>
             </div>
           </FadeInOnScroll>
           <FadeInOnScroll animationClass="duration-1000 translate-y">
-            <div class="font-1 sm:text-sm">
+            <div class="font-2 text-sm">
               Passionnée par la création de sites web modernes et performants,
               je mets mes compétences JavaScript, Vue.js et React.js au service
               de projets innovants.

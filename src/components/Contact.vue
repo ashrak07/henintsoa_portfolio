@@ -1,7 +1,13 @@
 <template>
   <section id="contact" class="min-h-screen bg-gray-900 text-white pt-32">
     <div class="max-w-3xl mx-auto px-6 lg:px-8">
-      <h2 class="text-3xl font-semibold text-center mb-12">Contactez-moi</h2>
+      <FadeInOnScroll
+        animationClass="transition-y-10 sm:pb-5 duration-800 ease-in-out"
+      >
+        <h2 class="font-1 text-2xl font-semibold text-center mb-12">
+          Contactez-moi
+        </h2>
+      </FadeInOnScroll>
       <form @submit.prevent="handleSubmit" class="space-y-6">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div>
@@ -52,7 +58,7 @@
 
 <script setup>
 import { ref } from "vue";
-
+import FadeInOnScroll from "./FadeInOnScroll.vue";
 const contact = ref(null);
 
 const form = ref({

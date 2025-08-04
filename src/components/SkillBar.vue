@@ -1,17 +1,20 @@
 <template>
-  <div>
-    <label class="block text-lg font-medium">{{ label }}</label>
-    <div class="relative pt-1" ref="barRef">
-      <div class="flex mb-2 items-center justify-between">
-        <div>
-          <span class="font-semibold text-sm">{{ animatedPercentage }}%</span>
-        </div>
+  <div class="flex md:px-12 flex-col text-center">
+    <img :src="image" class="animate-pulse h-18" alt="" />
+    <label class="block font-1 text-lg font-medium">{{ label }}</label>
+    <div class="justify-center relative" ref="barRef">
+      <div class="mb-2 items-center">
+        <span class="font-1 font-semibold text-sm"
+          >{{ animatedPercentage }}%</span
+        >
       </div>
+    </div>
+    <div>
       <FadeInOnScroll>
         <div class="flex mb-2 items-center justify-between">
           <div class="w-full bg-gray-700 rounded-full">
             <div
-              class="bg-blue-500 text-xs leading-none py-1 text-center text-white rounded-full transition-all duration-500 ease-in-out"
+              class="bg-gradient-to-r from-blue-400 to-white text-xs leading-none py-1 text-center text-white rounded-full transition-all duration-500 ease-in-out"
               :style="{ width: `${animatedPercentage}%` }"
             >
               <span class="sr-only">{{ animatedPercentage }}%</span>
@@ -35,6 +38,9 @@ const props = defineProps({
   percentage: {
     type: Number,
     required: true,
+  },
+  image: {
+    type: String,
   },
 });
 

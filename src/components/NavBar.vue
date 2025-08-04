@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-gray-900 text-white fixed w-full z-10">
+  <nav class="bg-gray-900 fixed min-w-screen shadow-sm z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16">
         <!-- Logo -->
@@ -41,11 +41,18 @@
         </div>
       </div>
     </div>
+
     <!-- Menu déroulant pour les petits écrans -->
     <!-- Menu mobile -->
     <div
-      :class="['md:hidden', isMenuOpen ? 'block' : 'hidden']"
-      class="bg-gray-900 space-x-8 px-8 pt-4 pb-6"
+      :class="[
+        'md:hidden',
+        isMenuOpen
+          ? 'absolute fixed top-0  min-h-screen flex flex-col '
+          : 'hidden',
+      ]"
+      class="font-1 text-xl space-y-5 bg-black/30 backdrop-blur-md z-50 w-60 pt-20 px-8"
+      @click="closeMenu()"
     >
       <NavLink href="#about" @navigate="closeMenu">A propos</NavLink>
       <NavLink href="#skill" @navigate="closeMenu">Compétences</NavLink>

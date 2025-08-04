@@ -1,11 +1,17 @@
 <template>
-  <section id="project" class="pt-30 min-h-screen bg-gray-900 text-white">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <h2 class="font-1 text-3xl font-semibold text-center mb-12">
-        Mes Projets
-      </h2>
+  <section id="project" class="pt-15 min-h-screen bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto p-6 lg:px-8">
+      <FadeInOnScroll
+        animationClass="transition-y-10 sm:pb-5 duration-800 ease-in-out"
+      >
+        <h2 class="font-1 text-2xl font-semibold text-center mb-7">
+          Mes Projets
+        </h2>
+      </FadeInOnScroll>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:mt-20 gap-8"
+      >
         <ProjectCard
           v-for="(project, index) in projects"
           :key="index"
@@ -13,6 +19,7 @@
           :title="project.title"
           :description="project.description"
           :link="project.link"
+          :tech="project.techno"
           @click="openModal(project)"
         />
       </div>
@@ -22,71 +29,71 @@
         v-if="showModal"
         class="fixed inset-0 flex items-center justify-center z-50 bg-black/30 backdrop-blur-sm"
       >
+        <!-- Overlay -->
         <div
-          class="relative bg-black bg-opacity-80 text-white p-6 rounded-lg w-[75vw] h-[75vh] flex flex-col"
+          class="relative bg-black bg-opacity-80 text-white p-3 rounded-lg w-[80vw] h-[80vh] flex flex-col"
         >
           <button
             @click="closeModal"
-            class="absolute top-2 right-3 text-white text-5xl"
+            class="absolute z-50 top-0 right-0 text-white text-5xl"
           >
             &times;
           </button>
 
-          <div class="flex gap-8 h-full">
-            <!-- Colonne gauche -->
-            <div class="w-1/2 relative flex flex-col justify-between">
-              <!-- Carrousel image -->
-              <div class="relative h-[60%]">
-                <transition name="fade" mode="out-in">
-                  <img
-                    :key="currentImageIndex"
-                    :src="selectedProject.images[currentImageIndex]"
-                    alt="Image du projet"
-                    class="w-full h-full object-cover rounded transition-all duration-500"
-                  />
-                </transition>
-                <!-- Bouton précédent -->
-                <button
-                  @click="prevImage"
-                  class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 text-white font-bold px-2 py-1 rounded-full"
-                >
-                  ‹
-                </button>
-                <!-- Bouton suivant -->
-                <button
-                  @click="nextImage"
-                  class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 text-white font-bold px-2 py-1 rounded-full"
-                >
-                  ›
-                </button>
-              </div>
+          <!-- <div class="flex gap-8 h-full"> -->
+          <!-- Colonne gauche -->
+          <!-- <div class="w-1/2 relative flex flex-col justify-between"> -->
 
-              <!-- Infos -->
+          <div class="relative flex flex-col justify-between">
+            <!-- Carrousel image -->
+            <!-- <div class="relative h-[100%]"> -->
+            <div class="relative w-full aspect-video">
+              <transition name="fade" mode="out-in">
+                <img
+                  :key="currentImageIndex"
+                  :src="selectedProject.images[currentImageIndex]"
+                  alt="Image du projet"
+                  class="w-full h-full object-cover rounded transition-all duration-500"
+                />
+              </transition>
+              <!-- Bouton précédent -->
+              <button
+                @click="prevImage"
+                class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 text-blue-400 font-bold px-2 py-1 rounded-full"
+              >
+                ‹
+              </button>
+              <!-- Bouton suivant -->
+              <button
+                @click="nextImage"
+                class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 text-blue-400 font-bold px-2 py-1 rounded-full"
+              >
+                ›
+              </button>
             </div>
+          </div>
 
-            <!-- Colonne droite -->
-            <div class="w-1/2 overflow-y-auto">
-              <div>
-                <div class="mt-4">
-                  <h3 class="text-xl font-semibold mb-2">
-                    {{ selectedProject.title }}
-                  </h3>
-                  <p class="mb-4">{{ selectedProject.description }}</p>
-                  <a
+          <div class="mt-2 overflow-y-auto">
+            <div class="">
+              <h3 class="font-1 text-xl font-semibold mb-2">
+                {{ selectedProject.title }}
+              </h3>
+              <p class="font-2 text-xs mb-4">
+                {{ selectedProject.description }}
+              </p>
+              <!-- <a
                     :href="selectedProject.link"
                     target="_blank"
                     class="inline-block bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-600 transition-colors"
                   >
                     Visiter le projet
-                  </a>
-                </div>
-              </div>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reprehenderit aperiam harum recusandae consequatur, nisi corporis
-              similique voluptates! Porro excepturi est ad et possimus eos
-              vero...
+                  </a> -->
             </div>
           </div>
+          <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reprehenderit aperiam harum recusandae consequatur, nisi corporis
+              similique voluptates! Porro excepturi est ad et possimus eos
+              vero... -->
         </div>
       </div>
     </div>
@@ -108,11 +115,18 @@
 </style>
 
 <script setup>
+import FadeInOnScroll from "./FadeInOnScroll.vue";
 import ProjectCard from "./ProjectCard.vue";
 import { ref } from "vue";
-import project1 from "../assets/pic1.jpg";
-import project2 from "../assets/pic2.jpg";
-import project3 from "../assets/pic3.jpg";
+import P1_01 from "../assets/images/project1/P101.png";
+import P1_02 from "../assets/images/project1/P102.png";
+import P1_03 from "../assets/images/project1/P103.png";
+import P1_04 from "../assets/images/project1/P104.png";
+import P1_05 from "../assets/images/project1/P105.png";
+import P1_06 from "../assets/images/project1/P106.png";
+import P1_07 from "../assets/images/project1/P107.png";
+// import P1_08 from "../assets/images/project1/P108.png";
+// import P1_09 from "../assets/images/project1/P109.png";
 
 const showModal = ref(false);
 const selectedProject = ref({
@@ -147,22 +161,26 @@ const closeModal = () => {
 
 const projects = [
   {
-    images: [project1, project2, project3],
+    images: [P1_01, P1_02, P1_03, P1_04, P1_05, P1_06, P1_07],
     title: "Hotel-ko",
-    description: "Description du projet 1.",
-    link: "https://exemple.com/projet1",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit,Lorem ipsum dolor sit amet consectetur adipisicing elit,Lorem ipsum dolor sit amet consectetur adipisicing elit,Lorem ipsum dolor sit amet consectetur adipisicing elit,Lorem ipsum dolor sit amet consectetur adipisicing elit,Lorem ipsum dolor sit amet consectetur adipisicing elit,Lorem ipsum dolor sit amet consectetur adipisicing elit,Lorem ipsum dolor sit amet consectetur adipisicing elit,Lorem ipsum dolor sit amet consectetur adipisicing elit,Lorem ipsum dolor sit amet consectetur adipisicing elit, Lorem ipsum dolor sit amet consectetur adipisicing elit, Lorem ipsum dolor sit amet consectetur adipisicing elit, Lorem ipsum dolor sit amet consectetur adipisicing elit, Lorem ipsum dolor sit amet consectetur adipisicing elit, Lorem ipsum dolor sit amet consectetur adipisicing elit, Lorem ipsum dolor sit amet consectetur adipisicing elit",
+    link: "",
+    techno: ["Mongo", "Vue", "Express", "Node"],
   },
   {
-    images: [project3, project1, project2],
+    images: [P1_01, P1_02, P1_03, P1_04, P1_05, P1_06],
     title: "CINEMAX",
     description: "Description du projet 2.",
     link: "https://exemple.com/projet2",
+    techno: ["React", "Vue", "Node", "Mongo"],
   },
   {
-    images: [project2, project3, project1],
+    images: [P1_01, P1_02, P1_03, P1_04, P1_05, P1_06],
     title: "Auto-ecole SMART",
     description: "Description du projet 3.",
     link: "https://exemple.com/projet3",
+    techno: ["React", "Vue", "Node", "Mongo"],
   },
 ];
 </script>
