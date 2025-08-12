@@ -19,7 +19,7 @@
         <ProjectCard
           v-for="(project, index) in projects"
           :key="index"
-          :image="project.images[0]"
+          :image="project.images[1]"
           :title="project.title"
           :description="project.description"
           :link="project.link"
@@ -49,7 +49,7 @@
           <!-- <div class="w-1/2 relative flex flex-col justify-between"> -->
 
           <!-- Contenu image + texte -->
-          <div class="flex flex-col md:flex-row gap-4 h-full mt-6">
+          <div class="flex flex-col md:flex-row md:gap-8 gap-4 h-full mt-6">
             <div
               class="w-full md:w-1/2 h-60 md:h-full flex justify-center items-center relative"
             >
@@ -82,12 +82,24 @@
                 />
               </button>
             </div>
-            <div class="w-full md:w-1/2 flex-1 overflow-y-auto pr-2">
+            <div class="w-full md:w-1/2 flex-1 overflow-y-auto pr-2 pb-5">
               <h3 class="font-1 text-lg md:text-xl font-semibold mb-2">
                 {{ selectedProject.title }}
               </h3>
+              <button class="mb-5 bg-blue-600 p-2 rounded-md">
+                Visiter le projet
+              </button>
+              <div class="flex gap-1">
+                <div
+                  class="flex bg-transparent font-2 text-white text-semibold rounded-xl border-white border-1 text-sm px-2 h-min"
+                  v-for="(tech, i) in selectedProject.techno"
+                  :key="i"
+                >
+                  {{ tech }}
+                </div>
+              </div>
               <p
-                class="font-2 text-sm md:text-base leading-relaxed text-gray-200"
+                class="font-2 mt-5 text-sm md:text-base leading-relaxed text-gray-200"
               >
                 {{ selectedProject.description }}
               </p>
@@ -118,14 +130,22 @@ import FadeInOnScroll from "./FadeInOnScroll.vue";
 import ProjectCard from "./ProjectCard.vue";
 import { ref } from "vue";
 import P1_01 from "../assets/images/project1/P101.png";
-import P1_02 from "../assets/images/project1/P102.png";
+import P1_08 from "../assets/images/project1/P1_08.png";
 import P1_03 from "../assets/images/project1/P103.png";
 import P1_04 from "../assets/images/project1/P104.png";
 import P1_05 from "../assets/images/project1/P105.png";
 import P1_06 from "../assets/images/project1/P106.png";
 import P1_07 from "../assets/images/project1/P107.png";
-// import P1_08 from "../assets/images/project1/P108.png";
-// import P1_09 from "../assets/images/project1/P109.png";
+import P1_02 from "../assets/images/project1/P102.png";
+import P2_01 from "../assets/images/project2/P201.png";
+import P2_02 from "../assets/images/project2/P202.png";
+import P2_03 from "../assets/images/project2/P203.png";
+import P3_01 from "../assets/images/project3/P301.png";
+import P3_02 from "../assets/images/project3/P302.png";
+import P3_03 from "../assets/images/project3/P303.png";
+import P3_04 from "../assets/images/project3/P304.png";
+import P3_05 from "../assets/images/project3/P305.png";
+import P3_06 from "../assets/images/project3/P306.png";
 
 const showModal = ref(false);
 const selectedProject = ref({
@@ -133,6 +153,7 @@ const selectedProject = ref({
   description: "",
   link: "",
   images: [],
+  techno: [],
 });
 
 const currentImageIndex = ref(0);
@@ -160,26 +181,28 @@ const closeModal = () => {
 
 const projects = [
   {
-    images: [P1_01, P1_02, P1_03, P1_04, P1_05, P1_06, P1_07],
+    images: [P1_08, P1_01, P1_02, P1_03, P1_04, P1_05, P1_06, P1_07],
     title: "Hotel-ko",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit,Lorem ipsum dolor sit amet consectetur adipisicing elit,Lorem ipsum dolor sit amet consectetur adipisicing elit,Lorem ipsum dolor sit amet consectetur adipisicing elit,Lorem ipsum dolor sit amet consectetur adipisicing elit,Lorem ipsum dolor sit amet consectetur adipisicing elit,Lorem ipsum dolor sit amet consectetur adipisicing elit,Lorem ipsum dolor sit amet consectetur adipisicing elit,Lorem ipsum dolor sit amet consectetur adipisicing elit,Lorem ipsum dolor sit amet consectetur adipisicing elit, Lorem ipsum dolor sit amet consectetur adipisicing elit, Lorem ipsum dolor sit amet consectetur adipisicing elit, Lorem ipsum dolor sit amet consectetur adipisicing elit, Lorem ipsum dolor sit amet consectetur adipisicing elit, Lorem ipsum dolor sit amet consectetur adipisicing elit, Lorem ipsum dolor sit amet consectetur adipisicing elit",
+      "Une application Web de réservation d'hôtel qui permet aux utilisateurs de consulter les chambres disponibles, de vérifier leur disponibilités selon les dates choisies, puis de réserver en ligne. Un espace administrateur est également intégré, offrant un Dashboard complet pour gérer l'ensemble du système. L'administrateur peut visualiser les réservations, la liste des chambres et des utilisateurs, ainsi que créer, modifier, supprimer des chambres selon les besoins. ",
     link: "",
-    techno: ["Mongo", "Vue", "Express", "Node"],
+    techno: ["Mongo", "Vue.js", "Express", "Node.js"],
   },
   {
-    images: [P1_01, P1_02, P1_03, P1_04, P1_05, P1_06],
+    images: [P2_02, P2_01, P2_03],
     title: "CINEMAX",
-    description: "Description du projet 2.",
+    description:
+      "Une application de réservation de places de cinéma. L'utilisateur peut séléctionner une projection parmi les films proposés, choisir ses places sur un plan interactif, puis générer son ticket de manière automatique après confirmation. Côté administrateur, une interface dédiée permet de créer de nouvelles projections avec les détails du film, la date, l' heure et la salle.",
     link: "https://exemple.com/projet2",
-    techno: ["React", "Vue", "Node", "Mongo"],
+    techno: ["Mongo", "Express", "React.js", "Node.js"],
   },
   {
-    images: [P1_01, P1_02, P1_03, P1_04, P1_05, P1_06],
-    title: "Auto-ecole SMART",
-    description: "Description du projet 3.",
+    images: [P3_01, P3_02, P3_03, P3_04, P3_05, P3_06],
+    title: "Auto-école SMART",
+    description:
+      "Application de gestion d'Auto-école permet de centraliser les activités des étudiants, des enseignants et du gérant. Les étudiants peuvent consulter leur emploi du temps et suivre les cours programmés. Les professeurs disposent d'un espace pour gérer leurs séances, les marquer comme efféctuées et visualiser leurs planning. Le gérant a accès à un tableau de bord pour suivre l'avancement des cours, coordonner les enseignants et gérer les disponibilités.",
     link: "https://exemple.com/projet3",
-    techno: ["React", "Vue", "Node", "Mongo"],
+    techno: ["Mongo", "Express", "React.js", "Node.js"],
   },
 ];
 </script>
