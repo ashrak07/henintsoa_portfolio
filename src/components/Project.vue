@@ -14,7 +14,7 @@
       </FadeInOnScroll>
 
       <div
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:mt-20 gap-8"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:mt-20 gap-12"
       >
         <ProjectCard
           v-for="(project, index) in projects"
@@ -24,7 +24,6 @@
           :description="project.description"
           :link="project.link"
           :tech="project.techno"
-          @click="openModal(project)"
         />
       </div>
 
@@ -184,24 +183,24 @@ const projects = [
     images: [P1_08, P1_01, P1_02, P1_03, P1_04, P1_05, P1_06, P1_07],
     title: "Hotel-ko",
     description:
-      "Une application Web de réservation d'hôtel qui permet aux utilisateurs de consulter les chambres disponibles, de vérifier leur disponibilités selon les dates choisies, puis de réserver en ligne. Un espace administrateur est également intégré, offrant un Dashboard complet pour gérer l'ensemble du système. L'administrateur peut visualiser les réservations, la liste des chambres et des utilisateurs, ainsi que créer, modifier, supprimer des chambres selon les besoins. ",
-    link: "",
+      "Une appilcation qui permet aux utilisateurs de consulter les chambres disponibles, vérifier les disponibilités selon les dates et réserver en ligne. L’administrateur dispose d’un dashboard pour gérer les réservations, les chambres et les utilisateurs, et peut créer, modifier ou supprimer des chambres. ",
+    link: "https://github.com/ashrak07/Project_hotel.git",
     techno: ["Mongo", "Vue.js", "Express", "Node.js"],
   },
   {
     images: [P2_02, P2_01, P2_03],
     title: "CINEMAX",
     description:
-      "Une application de réservation de places de cinéma. L'utilisateur peut séléctionner une projection parmi les films proposés, choisir ses places sur un plan interactif, puis générer son ticket de manière automatique après confirmation. Côté administrateur, une interface dédiée permet de créer de nouvelles projections avec les détails du film, la date, l' heure et la salle.",
-    link: "https://exemple.com/projet2",
+      "Une application qui centralise les activités des étudiants, enseignants et du gérant. Les étudiants consultent leur emploi du temps, les professeurs gèrent leurs séances et le gérant suit l’avancement des cours, coordonne les enseignants et gère les disponibilités via un dashboard.",
+    link: "https://github.com/ashrak07/project_cinema.git",
     techno: ["Mongo", "Express", "React.js", "Node.js"],
   },
   {
     images: [P3_01, P3_02, P3_03, P3_04, P3_05, P3_06],
     title: "Auto-école SMART",
     description:
-      "Application de gestion d'Auto-école permet de centraliser les activités des étudiants, des enseignants et du gérant. Les étudiants peuvent consulter leur emploi du temps et suivre les cours programmés. Les professeurs disposent d'un espace pour gérer leurs séances, les marquer comme efféctuées et visualiser leurs planning. Le gérant a accès à un tableau de bord pour suivre l'avancement des cours, coordonner les enseignants et gérer les disponibilités.",
-    link: "https://exemple.com/projet3",
+      "Une application qui permet aux utilisateurs de sélectionner un film, choisir leurs places sur un plan interactif et générer automatiquement leur ticket. L’administrateur peut créer de nouvelles projections avec les détails du film, la date, l’heure et la salle.",
+    link: "https://github.com/ashrak07/project_auto_ecole.git",
     techno: ["Mongo", "Express", "React.js", "Node.js"],
   },
 ];
