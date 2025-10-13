@@ -191,7 +191,7 @@ const projects = [
     images: [P2_02, P2_01, P2_03],
     title: "CINEMAX",
     description:
-      "Une application qui centralise les activités des étudiants, enseignants et du gérant. Les étudiants consultent leur emploi du temps, les professeurs gèrent leurs séances et le gérant suit l’avancement des cours, coordonne les enseignants et gère les disponibilités via un dashboard.",
+      "Une application qui permet aux utilisateurs de sélectionner un film, choisir leurs places sur un plan interactif et générer automatiquement leur ticket. L’administrateur peut créer de nouvelles projections avec les détails du film, la date, l’heure et la salle.",
     link: "https://github.com/ashrak07/project_cinema.git",
     techno: ["Mongo", "Express", "React.js", "Node.js"],
   },
@@ -199,7 +199,7 @@ const projects = [
     images: [P3_01, P3_02, P3_03, P3_04, P3_05, P3_06],
     title: "Auto-école SMART",
     description:
-      "Une application qui permet aux utilisateurs de sélectionner un film, choisir leurs places sur un plan interactif et générer automatiquement leur ticket. L’administrateur peut créer de nouvelles projections avec les détails du film, la date, l’heure et la salle.",
+      "Une application qui centralise les activités des étudiants, enseignants et du gérant. Les étudiants consultent leur emploi du temps, les professeurs gèrent leurs séances et le gérant suit l’avancement des cours, coordonne les enseignants et gère les disponibilités via un dashboard.",
     link: "https://github.com/ashrak07/project_auto_ecole.git",
     techno: ["Mongo", "Express", "React.js", "Node.js"],
   },
