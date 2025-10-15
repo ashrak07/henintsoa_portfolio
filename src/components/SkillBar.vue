@@ -14,7 +14,7 @@
         <div class="flex mb-2 items-center justify-between">
           <div class="w-full bg-gray-700 rounded-full">
             <div
-              class="bg-gradient-to-r from-blue-400 to-white text-xs leading-none py-1 text-center text-white rounded-full transition-all duration-500 ease-in-out"
+              class="bg-gradient-to-r from-blue-400 to-cyan-800 text-xs leading-none py-1 text-center text-white rounded-full transition-all duration-500 ease-in-out"
               :style="{ width: `${animatedPercentage}%` }"
             >
               <span class="sr-only">{{ animatedPercentage }}%</span>

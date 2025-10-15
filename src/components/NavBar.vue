@@ -8,7 +8,7 @@
         <div class="flex items-center">
           <a
             href="#"
-            class="font-1 font-semibold text-3xl bg-gradient-to-r from-blue-400 to-white text-transparent bg-clip-text"
+            class="font-1 font-semibold text-3xl bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
             >Henintsoa R.</a
           >
         </div>

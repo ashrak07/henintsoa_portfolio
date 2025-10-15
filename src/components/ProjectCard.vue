@@ -48,7 +48,7 @@
           <button
             @click="openWebsite"
             type="button"
-            class="flex items-center justify-center gap-2 flex-1 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-500 transition font-1"
+            class="flex items-center justify-center gap-2 flex-1 bg-gradient-to-r from-blue-600 to-purple-700 text-white py-2 rounded-lg hover:bg-blue-500 transition font-1"
           >
             Website
             <img src="/src/assets/link.png" alt="Website" class="h-5" />
