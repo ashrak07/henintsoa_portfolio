@@ -2,8 +2,8 @@
   <div
     ref="fadeElement"
     :class="[
-      'transition-all duration-500 ease-out',
-      isVisible ? animationClass : 'opacity-0 translate-y-20',
+      'transition-all  ease-out', // classes de transition par défaut
+      isVisible ? animationClass : initialClass, // état initial invisible + décalé
     ]"
   >
     <slot></slot>
@@ -17,7 +17,11 @@ import { defineProps } from "vue";
 const props = defineProps({
   animationClass: {
     type: String,
-    default: "opacity-100 translate-y-0",
+    default: "opacity-100 translate-y-0", // classes finales
+  },
+  initialClass: {
+    type: String,
+    default: "opacity-0 translate-y-8", // classes initiales invisibles
   },
 });
 
@@ -32,14 +36,10 @@ const observer = new IntersectionObserver(
 );
 
 onMounted(() => {
-  if (fadeElement.value) {
-    observer.observe(fadeElement.value);
-  }
+  if (fadeElement.value) observer.observe(fadeElement.value);
 });
 
 onBeforeUnmount(() => {
-  if (fadeElement.value) {
-    observer.unobserve(fadeElement.value);
-  }
+  if (fadeElement.value) observer.unobserve(fadeElement.value);
 });
 </script>

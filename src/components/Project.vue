@@ -6,9 +6,10 @@
   >
     <div class="max-w-7xl mx-auto p-6 lg:px-8">
       <FadeInOnScroll
-        animationClass="transition-y-10 sm:pb-5 duration-800 ease-in-out"
+        initialClass="opacity-0 translate-y-10"
+        animationClass="opacity-100 duration-300 translate-y-0"
       >
-        <h2 class="font-1 text-2xl font-semibold text-center mb-7">
+        <h2 class="font-1 text-3xl font-semibold text-center mb-7">
           Mes Projets
         </h2>
       </FadeInOnScroll>

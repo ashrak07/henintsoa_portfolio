@@ -2,13 +2,14 @@
   <!-- <section id="skill" class="pt-20 bg-gray-900 text-white"> -->
   <section
     id="skill"
-    class="pt-20 bg-gradient-to-b from-gray-900 to-black text-white"
+    class="md:pt-20 pt-20 bg-gradient-to-b from-gray-900 to-black text-white"
   >
     <div class="max-w-3xl mx-auto px-6 lg:px-8">
       <FadeInOnScroll
-        animationClass="transition-y-10 sm:pb-5 duration-800 ease-in-out"
+        initialClass="opacity-0 translate-y-10"
+        animationClass="opacity-100 duration-300 translate-y-0"
       >
-        <h2 class="font-1 text-2xl font-semibold text-center mb-7">
+        <h2 class="font-1 text-3xl font-semibold text-center mb-7">
           Mes Compétences
         </h2>
       </FadeInOnScroll>

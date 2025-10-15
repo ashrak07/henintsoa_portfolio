@@ -1,51 +1,89 @@
 <template>
-  <!-- <section id="about" class="md:px-30 md:py-40 pt-20 bg-gray-900 text-white"> -->
   <section
     id="about"
-    class="md:px-30 md:py-40 pt-20 bg-gradient-to-t from-gray-900 to-black p-6 text-white"
+    class="relative bg-gradient-to-t from-gray-900 to-black md:pt-60 pt-25 pb-20 px-6 md:px-24 text-white"
   >
-    <div class="">
-      <div class="flex flex-col lg:flex-row items-center gap-6">
-        <!-- Photo -->
-        <FadeInOnScroll animationClass="">
+    <div
+      class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12"
+    >
+      <!-- PHOTO -->
+      <FadeInOnScroll
+        initialClass="opacity-0 translate-y-10"
+        animationClass="opacity-100 duration-300 translate-y-0"
+      >
+        <div class="group relative w-48 h-48 sm:w-64 sm:h-64 flex-shrink-0">
           <div
-            class="flex-shrink-0 w-50 h-50 sm:w-68 sm:h-68 overflow-hidden relative group"
+            class="w-full h-full rounded-full overflow-hidden border-4 border-white relative transition-transform duration-500 group-hover:scale-105 shadow-xl"
           >
             <img
               src="../assets/henintsoa.jpeg"
-              alt="Votre nom"
-              class="w-full h-full rounded-full object-cover border-4 border-white relative"
+              alt="Henintsoa"
+              class="w-full h-full object-cover"
               style="object-position: center top"
             />
           </div>
+          <!-- Glow hover effect -->
+          <div
+            class="absolute inset-0 rounded-full bg-blue-400 opacity-0 transition-opacity duration-500 group-hover:opacity-20"
+          ></div>
+        </div>
+      </FadeInOnScroll>
+
+      <!-- DESCRIPTION -->
+      <div
+        class="flex-1 flex flex-col justify-center space-y-6 text-center lg:text-left"
+      >
+        <!-- Nom et rôle -->
+        <FadeInOnScroll
+          initialClass="opacity-0 translate-y-10"
+          animationClass="opacity-100 duration-300 translate-y-0"
+        >
+          <h1 class="text-3xl md:text-5xl font-bold font-1">
+            Henintsoa <span class="text-blue-400">RAKOTONDRAIBE</span>
+          </h1>
+          <h2 class="text-lg md:text-3xl font-semibold">
+            Je suis <span ref="typedElement" class="text-blue-400"></span>
+          </h2>
         </FadeInOnScroll>
 
         <!-- Description -->
-        <div class="animate-fadeIn text-center px-6 sm:px-16 lg:text-left">
-          <FadeInOnScroll animationClass="duration-1000 translate-y">
-            <div class="font-1 text-2xl font-semibold md:text-5xl">
-              Henintsoa <br />
-              RAKOTONDRAIBE
-            </div>
-            <div class="my-4 text-lg font-semibold md:my-6 md:text-3xl">
-              Je suis <span ref="typedElement" class="text-blue-400"></span>
-            </div>
-          </FadeInOnScroll>
-          <FadeInOnScroll animationClass="duration-1000 translate-y">
-            <div class="font-2 text-sm">
-              Passionnée par la création de sites web modernes et performants,
-              je mets mes compétences JavaScript, Vue.js et React.js au service
-              de projets innovants.
-            </div>
-          </FadeInOnScroll>
-          <div
-            class="pt-5"
-            style="display: flex; gap: 10px; justify-content: end"
-          >
-            <img src="/src/assets/github.svg" alt="" style="height: 20px" />
-            <img src="/src/assets/linkedin .svg" alt="" style="height: 20px" />
+        <FadeInOnScroll
+          initialClass="opacity-0 translate-y-10"
+          animationClass="opacity-100 duration-400 translate-y-0"
+        >
+          <p class="text-gray-300 font-2 md:text-lg leading-relaxed">
+            Passionnée par la création de sites web modernes et performants, je
+            mets mes compétences en JavaScript, Vue.js et React.js au service de
+            projets innovants.
+          </p>
+        </FadeInOnScroll>
+
+        <!-- Social icons -->
+        <FadeInOnScroll
+          initialClass="opacity-0 translate-y-10"
+          animationClass="opacity-100 duration-600 translate-y-0"
+        >
+          <div class="flex justify-center lg:justify-start gap-6 mt-4">
+            <a
+              href="https://github.com"
+              target="_blank"
+              class="hover:scale-110 transition-transform duration-300"
+            >
+              <img src="../assets/github.svg" alt="GitHub" class="h-6 w-6" />
+            </a>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              class="hover:scale-110 transition-transform duration-300"
+            >
+              <img
+                src="../assets/linkedin .svg"
+                alt="LinkedIn"
+                class="h-6 w-6"
+              />
+            </a>
           </div>
-        </div>
+        </FadeInOnScroll>
       </div>
     </div>
   </section>
@@ -61,14 +99,14 @@ const typedElement = ref(null);
 onMounted(() => {
   new Typed(typedElement.value, {
     strings: ["Developpeur Frontend", "Developpeur Web"],
-    typeSpeed: 40,
+    typeSpeed: 50,
     backSpeed: 40,
-    backDelay: 1000,
+    backDelay: 1200,
     loop: true,
   });
 });
 </script>
 
 <style scoped>
-/* Optionnel : style pour ta classe .clip-diamond si tu veux un effet particulier */
+/* Optional: Custom fonts or shadow effects */
 </style>

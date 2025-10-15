@@ -52,7 +52,7 @@ const animate = (target) => {
   let current = 0;
   const step = () => {
     if (current < target) {
-      current += 1;
+      current += 5;
       animatedPercentage.value = current;
       requestAnimationFrame(step);
     } else {

@@ -4,6 +4,7 @@ import Profile from "../src/components/Profile.vue";
 import Skill from "../src/components/Skill.vue";
 import Project from "../src/components/Project.vue";
 import Contact from "../src/components/Contact.vue";
+import Parcours from "./components/Parcours.vue";
 </script>
 
 <template>
@@ -13,6 +14,7 @@ import Contact from "../src/components/Contact.vue";
     <Profile />
     <Skill />
     <Project />
+    <Parcours />
     <Contact />
   </div>
 </template>
