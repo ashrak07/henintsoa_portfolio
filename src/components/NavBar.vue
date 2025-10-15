@@ -48,13 +48,10 @@
     <!-- Menu mobile -->
     <div
       :class="[
-        'md:hidden',
-        isMenuOpen
-          ? 'absolute fixed top-0  min-h-screen flex flex-col '
-          : 'hidden',
+        'font-1 text-md space-y-5 bg-black/30 backdrop-blur-md z-50 w-60 pt-20 px-8 md:hidden fixed top-0 left-0 min-h-screen flex flex-col transition-transform duration-500',
+        isMenuOpen ? 'translate-x-0 opacity-100' : '-translate-x-60 opacity-0',
       ]"
-      class="font-1 text-xl space-y-5 bg-black/30 backdrop-blur-md z-50 w-60 pt-20 px-8"
-      @click="closeMenu()"
+      @click="closeMenu"
     >
       <NavLink href="#about" @navigate="closeMenu">A propos</NavLink>
       <NavLink href="#skill" @navigate="closeMenu">Compétences</NavLink>
