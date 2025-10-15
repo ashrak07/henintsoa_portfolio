@@ -1,12 +1,12 @@
 <template>
-  <section class="py-5 bg-gray-50 dark:bg-gray-900">
+  <section class="py-10 bg-gray-50 dark:bg-gray-900">
     <div class="max-w-4xl mx-auto px-6">
       <FadeInOnScroll
         initialClass="opacity-0 translate-y-10"
         animationClass="opacity-100 duration-300 translate-y-0"
       >
         <h2
-          class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-10 text-center"
+          class="text-3xl font-1 font-bold text-gray-800 dark:text-gray-100 mb-10 text-center"
         >
           Experiences et parcours
         </h2>

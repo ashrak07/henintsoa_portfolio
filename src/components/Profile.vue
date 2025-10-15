@@ -69,7 +69,7 @@
         >
           <div class="flex justify-center lg:justify-start gap-6 mt-4">
             <a
-              href="https://github.com"
+              href="https://github.com/ashrak07/"
               target="_blank"
               class="hover:scale-110 transition-transform duration-300"
             >

@@ -1,8 +1,13 @@
 <template>
-  <section id="contact" class="pt-20 bg-gray-900 text-white">
-    <h2 class="font-1 text-3xl md:text-4xl font-semibold text-center mb-8">
-      Contactez-moi
-    </h2>
+  <section id="contact" class="pt-20 pb-10 bg-gray-900 text-white">
+    <FadeInOnScroll
+      initialClass="opacity-0 translate-y-10"
+      animationClass="opacity-100 duration-300 translate-y-0"
+    >
+      <h2 class="font-1 text-3xl md:text-4xl font-semibold text-center mb-8">
+        Contactez-moi
+      </h2>
+    </FadeInOnScroll>
     <div class="flex flex-col md:flex-row gap-18 p-5 max-w-5xl mx-auto">
       <div class="md:flex-1">
         <!-- INFOS CONTACT -->
@@ -83,19 +88,6 @@
               />
             </div>
 
-            <!-- Nouveau champ téléphone -->
-            <div>
-              <label for="subjet" class="block text-sm font-2">Sujet</label>
-              <input
-                id="phone"
-                v-model="form.subject"
-                placeholder="Entrer le sujet de discussion"
-                type="tel"
-                required
-                class="mt-1 block w-full px-4 py-2 border border-gray-700 rounded-md text-white focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-
             <div>
               <label for="message" class="block text-sm font-2">Message</label>
               <textarea
@@ -133,7 +125,6 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 const form = ref({
   name: "",
   email: "",
-  subject: "",
   message: "",
 });
 
@@ -150,7 +141,7 @@ const handleSubmit = () => {
     .send(serviceID, templateID, form.value, publicKey)
     .then(() => {
       alert("✅ Message envoyé avec succès !");
-      form.value = { name: "", email: "", subject: "", message: "" };
+      form.value = { name: "", email: "", message: "" };
       isSubmitting.value = false;
     })
     .catch((error) => {
