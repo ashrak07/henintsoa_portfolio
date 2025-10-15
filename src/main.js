@@ -7,10 +7,22 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import {
+  faTimes,
+  faPhone,
+  faEnvelope,
+  faMapMarkerAlt,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-library.add(faChevronLeft, faChevronRight, faTimes);
+library.add(
+  faChevronLeft,
+  faChevronRight,
+  faTimes,
+  faPhone,
+  faEnvelope,
+  faMapMarkerAlt
+);
 
 const app = createApp(App);
 app.use(createPinia());

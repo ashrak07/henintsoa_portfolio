@@ -38,11 +38,15 @@
           initialClass="opacity-0 translate-y-10"
           animationClass="opacity-100 duration-400 translate-y-0"
         >
-          <h1 class="text-3xl md:text-5xl font-bold font-2">
+          <h1 class="text-3xl md:text-5xl font-bold">
             Henintsoa <span class="text-blue-400">RAKOTONDRAIBE</span>
           </h1>
           <h2 class="text-lg md:text-3xl font-semibold mt-3">
-            Je suis <span ref="typedElement" class="text-blue-400"></span>
+            Je suis
+            <span
+              ref="typedElement"
+              class="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
+            ></span>
           </h2>
         </FadeInOnScroll>
 
