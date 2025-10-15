@@ -9,7 +9,7 @@
         initialClass="opacity-0 translate-y-10"
         animationClass="opacity-100 duration-300 translate-y-0"
       >
-        <h2 class="font-1 text-3xl font-semibold text-center mb-7">
+        <h2 class="font-1 text-3xl font-semibold text-center mb-12">
           Mes Compétences
         </h2>
       </FadeInOnScroll>

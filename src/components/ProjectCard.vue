@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-gray-900 rounded-lg shadow-2xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 max-w-sm"
+    class="bg-gray-800 rounded-lg shadow-2xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 max-w-sm"
   >
     <!-- Image en haut -->
     <img :src="image" :alt="title" class="w-full h-48 object-cover" />
@@ -37,7 +37,7 @@
           <button
             @click="openGithub"
             type="button"
-            class="flex items-center justify-center gap-2 flex-1 bg-gray-800 text-white py-2 rounded-lg hover:bg-gray-700 transition"
+            class="flex items-center justify-center gap-2 flex-1 bg-gray-600 text-white py-2 rounded-lg hover:bg-gray-700 transition"
           >
             GitHub
             <img src="/src/assets/github.svg" alt="GitHub" class="h-5" />

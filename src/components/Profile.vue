@@ -9,7 +9,7 @@
       <!-- PHOTO -->
       <FadeInOnScroll
         initialClass="opacity-0 translate-y-10"
-        animationClass="opacity-100 duration-300 translate-y-0"
+        animationClass="opacity-100 duration-400 translate-y-0"
       >
         <div class="group relative w-48 h-48 sm:w-64 sm:h-64 flex-shrink-0">
           <div
@@ -36,12 +36,12 @@
         <!-- Nom et rôle -->
         <FadeInOnScroll
           initialClass="opacity-0 translate-y-10"
-          animationClass="opacity-100 duration-300 translate-y-0"
+          animationClass="opacity-100 duration-400 translate-y-0"
         >
-          <h1 class="text-3xl md:text-5xl font-bold font-1">
+          <h1 class="text-3xl md:text-5xl font-bold font-2">
             Henintsoa <span class="text-blue-400">RAKOTONDRAIBE</span>
           </h1>
-          <h2 class="text-lg md:text-3xl font-semibold">
+          <h2 class="text-lg md:text-3xl font-semibold mt-3">
             Je suis <span ref="typedElement" class="text-blue-400"></span>
           </h2>
         </FadeInOnScroll>
@@ -61,7 +61,7 @@
         <!-- Social icons -->
         <FadeInOnScroll
           initialClass="opacity-0 translate-y-10"
-          animationClass="opacity-100 duration-600 translate-y-0"
+          animationClass="opacity-100 duration-700 translate-y-0"
         >
           <div class="flex justify-center lg:justify-start gap-6 mt-4">
             <a
